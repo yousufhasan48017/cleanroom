@@ -1,0 +1,49 @@
+vendor_code,vendor_name,ntn,contact_email,phone,city,country,currency,payment_terms_days,credit_limit,category,tax_status,last_updated,status
+V-1001,Searle Pakistan Limited,1234567-8,procurement@searle.pk,0300-8451122,Karachi,Pakistan,PKR,30,5000000,Pharma Raw Material,Filer,2026-06-12,Active
+V-1002,The Searle Company Ltd.,1234567-8,proc@searle.pk,+92 300 8451122,karachi,Pakistan,PKR,30,5000000,Pharma Raw Material,Filer,2025-11-03,Active
+V-1003,SEARLE PAKISTAN LTD,,procurement@searle.pk,03008451122,KARACHI,PAK,Rs.,30,,Pharma,Filer,2019-02-18,Active
+V-1004,Pakistan Cables Limited,0987654-3,sales@pakistancables.com,021-35063000,Karachi,Pakistan,PKR,45,8000000,Electrical,Filer,2026-07-22,Active
+V-1005,Pakistan Cables Ltd,0987654-3,sales@pakistancables.com,+92 21 35063000,Karachi,Pakistan,PKR,45,8000000,Electrical,Filer,2026-07-22,Active
+V-1006,Candyland (Pvt) Limited,2233445-1,info@candyland.com.pk,042-35311234,Lahore,Pakistan,PKR,15,1200000,Confectionery,Filer,2026-05-30,Active
+V-1007,CANDYLAND PRIVATE LIMITED,2233445-1,,04235311234,lahore,pakistan,pkr,15,1200000,Confectionery,,2024-09-14,Active
+V-1008,Bisconi Foods (Pvt) Ltd,3344556-2,orders@bisconi.pk,0300-2019876,Karachi,Pakistan,PKR,30,900000,Confectionery,Filer,2026-08-01,Active
+V-1009,BISCONI FOODS PRIVATE LIMITED,3344556-2,orders@bisconi.pk,03002019876,Khi,PAK,RS,30,900000,Confectionery,Filer,2023-04-19,Active
+V-1010,Shangrila Foods Pvt Ltd,4455667-9,supply@shangrila.com.pk,021-34310099,Karachi,Pakistan,PKR,20,1500000,Food & Beverage,Filer,2026-04-11,Active
+V-1011,Shangrila (Private) Limited,4455667-9,supply@shangrila.com.pk,02134310099,Karachi,Pakistan,PKR,20,1500000,Food and Beverage,Filer,2021-08-25,Inactive
+V-1012,Tapal Tea Private Limited,5566778-4,info.tapal.pk,021-32570001,Karachi,Pakistan,PKR,30,2500000,Food & Beverage,Filer,2026-07-05,Active
+V-1013,Packages Limited,6677889-5,ahmed@@packages.pk,042-35811541,Lahore,Pakistan,PKR,60,12000000,Packaging,Filer,2026-06-28,Active
+V-1014,Indus Motor Company,7788990-6,,021-35063100,Karachi,Pakistan,PKR,45,,Automotive,Filer,2018-12-01,Active
+V-1015,Millat Tractors Limited,8899001-7,info@millat.com.pk,042-111200786,Lahore,Pakistan,PKR,45,7000000,Automotive,Filer,2026-03-17,Active
+V-1016,Engro Fertilizers Ltd,9900112-8,procure@engro.com,021-35297501,Karachi,Pakistan,PKR,30,15000000,Chemicals,Filer,2026-08-14,Active
+V-1017,Fauji Fertilizer Company,1122334-9,vendor@ffc.com.pk,051-2721471,Rawalpindi,Pakistan,PKR,30,11000000,Chemicals,Filer,2026-02-09,Active
+V-1018,Lucky Cement Limited,2211334-0,supply@lucky-cement.com,021-111786555,Karachi,Pakistan,PKR,30,9500000,Construction,Filer,2026-07-19,Active
+V-1019,Attock Petroleum Ltd,3322445-1,,051-5487502,Rawalpindi,Pakistan,PKR,7,4000000,Fuel,Filer,2020-06-30,Active
+V-1020,National Foods Limited,4433556-2,sales@nfoods.com,021-111327866,Karachi,Pakistan,PKR,30,3000000,Food & Beverage,Filer,2026-08-20,Active
+V-1021,Gul Ahmed Textile Mills,5544667-3,corporate@gulahmed.com,021-32311111,Karachi,Pakistan,PKR,45,6000000,Textile,Filer,2026-01-25,Active
+V-1022,Interloop Limited,6655778-4,info@interloop.com.pk,041-8540308,Faisalabad,Pakistan,PKR,45,5500000,Textile,Filer,2026-05-08,Active
+V-1023,Systems Limited,7766889-5,sales@systemsltd.com,042-111797911,Lahore,Pakistan,PKR,30,2000000,IT Services,Filer,2026-08-02,Active
+V-1024,NETSOL Technologies,8877990-6,info@netsoltech.com,042-35750220,Lahore,Pakistan,PKR,30,1800000,IT Services,Filer,2026-06-15,Active
+V-1025,Contour Software,9988001-7,,042-35296100,Lahore,Pakistan,PKR,30,1600000,IT Services,,2025-03-22,Active
+V-1026,TCS Private Limited,1029384-8,corporate@tcs.com.pk,021-111123456,Karachi,Pakistan,PKR,15,800000,Logistics,Filer,2026-07-30,Active
+V-1027,Leopards Courier Services,2938475-9,info@leopardscourier.com,021-111300786,Karachi,Pakistan,PKR,15,750000,Logistics,Filer,2026-04-27,Active
+V-1028,M&P Express Logistics,3847566-0,,021-111202020,Karachi,Pakistan,PKR,15,,Logistics,Non-Filer,2022-10-12,Active
+V-1029,Descon Engineering,4756677-1,procurement@descon.com,042-111337266,Lahore,Pakistan,PKR,60,10000000,Engineering,Filer,2026-03-05,Active
+V-1030,Sui Southern Gas Company,5665788-2,vendors@ssgc.com.pk,021-99021000,Karachi,Pakistan,PKR,30,20000000,Utilities,Filer,2026-08-11,Active
+V-1031,K-Electric Limited,6574899-3,supplychain@ke.com.pk,021-111537332,Karachi,Pakistan,PKR,30,25000000,Utilities,Filer,2026-07-08,Active
+V-1032,Al-Karam Textile Mills,7483900-4,sales@alkaram.com,021-32587171,Karachi,Pakistan,PKR,45,4500000,Textile,Filer,2026-02-14,Active
+V-1033,Service Industries Limited,8392011-5,info@serviceshoes.com.pk,042-35112345,Lahore,Pakistan,PKR,45,3500000,Footwear,Filer,2026-06-03,Active
+V-1034,Unilever Pakistan Limited,9301122-6,supplier@unilever.com,021-38620000,Karachi,Pakistan,PKR,60,30000000,FMCG,Filer,2026-08-18,Active
+V-1035,Nestle Pakistan Limited,1210233-7,procurement@pk.nestle.com,042-111637853,Lahore,Pakistan,PKR,60,28000000,FMCG,Filer,2026-07-25,Active
+V-1036,Colgate-Palmolive Pakistan,2119344-8,sales@colgate.com.pk,021-35148000,Karachi,Pakistan,PKR,45,,FMCG,Filer,2026-05-19,Active
+V-1037,Reliable Traders,12345-6,sales@ .com,0300123,karachi,PAK,Rs,9999,-50000,General Supplies,,2019-07-11,Active
+V-1038,Al Noor Enterprises   ,ABCD123-1,alnoor@traders,+92-300-12345678901,Khi,pakistan,pkr,-30,999999999,General Supplies,Non-Filer,2027-05-01,Active
+V-1039,Khan & Sons,,,,,,,,,General Supplies,,,
+V-1040,Zubair Trading Co.,3948576-2,zubair@trading.pk,021-32345678,Karachi,Pakistan,PKR,30,600000,General Supplies,Filer,2026-01-09,Active
+V-1041,Zubair Trading Company,3948576-2,zubair@trading.pk,021 3234 5678,Karachi,Pakistan,PKR,30,600000,General Supplies,Filer,2024-11-30,Active
+V-1042,Hi-Tech Lubricants,4059687-3,info@hitechlubricants.com,042-35789000,Lahore,Pakistan,PKR,30,2200000,Fuel,Filer,2026-04-02,Active
+V-1043,Ghandhara Industries,5160798-4,,021-35103000,Karachi,Pakistan,PKR,45,3300000,Automotive,Filer,2021-01-15,Inactive
+V-1044,Atlas Honda Limited,6271809-5,vendor@atlashonda.com.pk,021-35678000,Karachi,Pakistan,PKR,45,7500000,Automotive,Filer,2026-06-21,Active
+V-1045,Pak Suzuki Motor Company,7382910-6,supply@paksuzuki.com.pk,021-38771111,Karachi,Pakistan,PKR,45,8500000,Automotive,Filer,2026-07-14,Active
+V-1046,Dawlance Pvt Ltd,8493021-7,procurement@dawlance.com.pk,021-111000900,Karachi,Pakistan,PKR,30,4800000,Appliances,Filer,2026-03-28,Active
+V-1047,Haier Pakistan,9504132-8,info@haier.com.pk,042-111424376,Lahore,Pakistan,PKR,30,4200000,Appliances,Non-Filer,2026-05-11,Active
+V-1048,Orient Electric,1615243-9,sales@orient.com.pk,,Lahore,Pakistan,PKR,30,,Appliances,,2023-06-07,Active

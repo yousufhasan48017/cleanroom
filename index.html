@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleanroom — Master Data Quality Auditor</title>
+<meta name="description" content="Audit ERP master data before migration: duplicates, missing fields, format breaks, implausible values — scored, evidenced, and turned into a remediation plan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">Cleanroom</span>
+      <span class="brand-sub">Master data quality auditor</span>
+    </div>
+    <input type="file" id="file-input" accept=".csv,text/csv" class="sr">
+    <button class="btn" id="btn-sample" type="button">Load sample file</button>
+    <button class="btn" id="btn-upload" type="button">Upload CSV</button>
+    <button class="btn btn-ghost" id="btn-settings" type="button" aria-haspopup="dialog">AI settings</button>
+    <button class="btn btn-ghost" id="btn-theme" type="button" aria-label="Switch theme">Theme</button>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- ---------------- empty state ---------------- -->
+  <section class="panel empty dropzone" id="empty">
+    <h1>Find the bad data before it reaches the ERP.</h1>
+    <p class="empty-lede">
+      Data migration is where ERP implementations quietly fail — not because the software is wrong,
+      but because the master data going into it was never audited. Cleanroom reads a master data
+      file, scores it across six quality dimensions, and turns the findings into a remediation plan
+      a migration lead can actually action.
+    </p>
+    <div class="empty-actions">
+      <button class="btn btn-primary" id="btn-sample-2" type="button">Audit the sample vendor master</button>
+      <button class="btn" id="btn-upload-2" type="button">Upload your own CSV</button>
+    </div>
+    <p class="label" style="margin-bottom:.75rem">What it checks</p>
+    <div class="checks" id="checks"></div>
+  </section>
+
+  <!-- ---------------- results ---------------- -->
+  <div id="results" class="hidden">
+
+    <section class="panel verdict" id="verdict" aria-live="polite"></section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Quality dimensions</h2>
+        <p>Each score is the share of checked cells that passed, weighted by how badly a failure hurts a migration.</p>
+      </div>
+      <div class="panel meters" id="meters"></div>
+    </section>
+
+    <section class="section">
+      <div class="panel tiles" id="tiles"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Remediation plan</h2>
+        <p id="plan-source">Root causes behind the findings — five decisions, not four hundred rows.</p>
+      </div>
+      <div class="plan" id="plan"></div>
+    </section>
+
+    <section class="section" id="dups-section">
+      <div class="section-head">
+        <h2>Duplicate groups</h2>
+        <p>Matched on identity fields and on name similarity after legal suffixes are stripped.</p>
+      </div>
+      <div class="dups" id="dups"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Field profile</h2>
+        <p>Detected type, fill rate and defect count for every column.</p>
+      </div>
+      <div class="panel table-scroll">
+        <table id="fields-table">
+          <thead>
+            <tr>
+              <th scope="col">Field</th>
+              <th scope="col">Detected type</th>
+              <th scope="col">Rules</th>
+              <th scope="col">Completeness</th>
+              <th scope="col" class="num">Distinct</th>
+              <th scope="col" class="num">Issues</th>
+              <th scope="col">Worst</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Issue log</h2>
+        <p>Every finding, with the line number and the fix.</p>
+        <button class="btn" id="btn-export-issues" type="button">Export issues CSV</button>
+        <button class="btn" id="btn-export-plan" type="button">Export plan</button>
+      </div>
+      <div class="panel">
+        <div class="filters">
+          <label class="sr" for="f-severity">Filter by severity</label>
+          <select id="f-severity">
+            <option value="">All severities</option>
+            <option value="critical">Critical</option>
+            <option value="serious">Serious</option>
+            <option value="warning">Warning</option>
+            <option value="low">Low</option>
+          </select>
+          <label class="sr" for="f-dimension">Filter by dimension</label>
+          <select id="f-dimension"><option value="">All dimensions</option></select>
+          <label class="sr" for="f-field">Filter by field</label>
+          <select id="f-field"><option value="">All fields</option></select>
+          <label class="sr" for="f-search">Search</label>
+          <input type="search" id="f-search" placeholder="Search value or message">
+          <span class="count" id="issue-count"></span>
+        </div>
+        <div class="table-scroll">
+          <table id="issues-table">
+            <thead>
+              <tr>
+                <th scope="col" class="num">Line</th>
+                <th scope="col">Severity</th>
+                <th scope="col">Field</th>
+                <th scope="col">Finding</th>
+                <th scope="col">Value</th>
+                <th scope="col">Fix</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <span>Cleanroom — an ERP master data quality auditor</span>
+    <span>Built by <a href="https://yousufhasan48017.github.io">Yousuf Hasan</a></span>
+    <span>Runs entirely in your browser — no file is uploaded anywhere</span>
+  </footer>
+</main>
+
+<!-- ---------------- AI settings drawer ---------------- -->
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer-panel">
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <h2 id="drawer-title" style="margin-right:auto">AI profiling</h2>
+      <button class="btn btn-ghost" id="btn-close-drawer" type="button">Close</button>
+    </div>
+
+    <p>
+      The audit itself is deterministic — the same file always produces the same score. The language
+      model has one job: read the column headers and a sample of values, then decide what each column
+      <em>means</em> and which rules should apply to it. Leave this blank and Cleanroom falls back to
+      its built-in heuristic profiler.
+    </p>
+
+    <label for="endpoint">
+      Webhook URL
+      <input type="url" id="endpoint" placeholder="https://your-n8n-instance/webhook/cleanroom" autocomplete="off">
+    </label>
+    <p style="font-size:.75rem;color:var(--muted)">
+      Stored in this browser only. Point it at an n8n workflow (or any endpoint) that accepts the
+      request below and replies with JSON.
+    </p>
+
+    <div>
+      <p class="label" style="margin-bottom:.4rem">Request your endpoint receives</p>
+      <pre id="req-shape"></pre>
+    </div>
+    <div>
+      <p class="label" style="margin-bottom:.4rem">Response it must return</p>
+      <pre id="res-shape"></pre>
+    </div>
+
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+      <button class="btn btn-primary" id="btn-save-endpoint" type="button">Save</button>
+      <button class="btn" id="btn-clear-endpoint" type="button">Clear</button>
+    </div>
+  </div>
+</div>
+
+<script src="engine.js"></script>
+<script src="data/sample.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

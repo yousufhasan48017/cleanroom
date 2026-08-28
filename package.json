@@ -1,0 +1,21 @@
+{
+  "name": "cleanroom",
+  "version": "1.0.0",
+  "description": "Master data quality auditor for ERP migrations — scores a master data file across six quality dimensions and produces a remediation plan.",
+  "main": "engine.js",
+  "scripts": {
+    "test": "node test/engine.test.js",
+    "build:sample": "node tools/build-sample.js"
+  },
+  "keywords": [
+    "data-quality",
+    "master-data",
+    "erp",
+    "data-migration",
+    "business-analysis",
+    "deduplication"
+  ],
+  "author": "Yousuf Hasan",
+  "license": "MIT",
+  "private": false
+}
